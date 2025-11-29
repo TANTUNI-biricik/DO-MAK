@@ -3,171 +3,75 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sana Bir Mesaj Var</title>
+    <title>Doğum Günün Kutlu Olsun! 🎂</title>
     <style>
-        /* Temel CSS Stil Ayarları */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            display: flex;
-            justify-content: center;
-            align-items: flex-start; /* İçeriği yukarı hizala */
-            min-height: 100vh;
-            background-color: #f4f4f9;
-            padding: 20px;
-        }
-
-        .container {
-            display: flex;
-            max-width: 1200px;
-            width: 100%;
-            gap: 30px;
-        }
-
-        .main-content {
-            flex: 3; /* Ana içerik (zarf ve form) daha geniş yer kaplasın */
-            background-color: #ffffff;
-            padding: 30px;
-            border-radius: 12px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-        }
-
-        .sidebar {
-            flex: 1; /* Yan panel (gönderenler) daha dar olsun */
-            padding: 20px;
-            border-radius: 12px;
-            background-color: #e9ecef;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
-        }
-
-        /* Zarf Simülasyonu */
-        .envelope-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-
-        .heart {
-            font-size: 50px;
-            color: #ff6b6b; /* Kalp rengi */
-            animation: pulse 1.5s infinite; /* Kalp atışı animasyonu */
-        }
-
-        @keyframes pulse {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.1); }
-            100% { transform: scale(1); }
-        }
-
-        .envelope {
-            width: 100px;
-            height: 60px;
-            background-color: #ff9f43; /* Zarf rengi */
-            border-radius: 5px;
-            position: relative;
-            margin-top: -10px; /* Kalbin biraz altında kalsın */
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-
-        .envelope:before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 0;
-            height: 0;
-            border-left: 50px solid transparent;
-            border-right: 50px solid transparent;
-            border-top: 30px solid #e08b3c; /* Üst kapak gölgesi */
-            border-radius: 5px 5px 0 0;
-        }
-
-        /* Form Stilleri */
-        .form-group {
-            margin-bottom: 15px;
-        }
-
-        .form-group label {
-            display: block;
-            margin-bottom: 5px;
-            font-weight: bold;
-            color: #333;
-        }
-
-        .form-group input[type="text"],
-        .form-group textarea {
-            width: 100%;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 6px;
-            box-sizing: border-box; /* Padding'in genişliği etkilememesi için */
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 100px;
-        }
-
-        .send-button {
-            background-color: #28a745;
-            color: white;
-            padding: 10px 20px;
-            border: none;
-            border-radius: 6px;
-            cursor: pointer;
-            font-size: 16px;
-            transition: background-color 0.3s;
-            width: 100%;
-        }
-
-        .send-button:hover {
-            background-color: #218838;
-        }
-
-        /* Yan Panel Stilleri */
-        .sidebar h3 {
-            color: #333;
-            border-bottom: 2px solid #ccc;
-            padding-bottom: 10px;
-            margin-bottom: 15px;
-        }
-
+        /* (Önceki CSS kodunu burada koruyun. Yalnızca listeyi gizleyen JS kısmını kaldırdık.) */
+        /* TEMEL CSS STİLLERİ */
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: flex-start; min-height: 100vh; background-color: #f4f4f9; padding: 20px; }
+        .container { display: flex; max-width: 1200px; width: 100%; gap: 30px; }
+        .main-content { flex: 3; background-color: #ffffff; padding: 30px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); }
+        .sidebar { flex: 1; padding: 20px; border-radius: 12px; background-color: #e9ecef; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); }
+        .envelope-container { display: flex; flex-direction: column; align-items: center; margin-bottom: 30px; }
+        .heart { font-size: 50px; color: #ff6b6b; animation: pulse 1.5s infinite; }
+        @keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.1); } 100% { transform: scale(1); } }
+        .envelope { width: 100px; height: 60px; background-color: #ff9f43; border-radius: 5px; position: relative; margin-top: -10px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); }
+        .envelope:before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 0; border-left: 50px solid transparent; border-right: 50px solid transparent; border-top: 30px solid #e08b3c; border-radius: 5px 5px 0 0; }
+        .form-group { margin-bottom: 15px; }
+        .form-group label { display: block; margin-bottom: 5px; font-weight: bold; color: #333; }
+        .form-group input[type="text"], .form-group textarea { width: 100%; padding: 10px; border: 1px solid #ccc; border-radius: 6px; box-sizing: border-box; }
+        .form-group textarea { resize: vertical; min-height: 100px; }
+        .send-button { background-color: #28a745; color: white; padding: 10px 20px; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; transition: background-color 0.3s; width: 100%; }
+        .send-button:hover { background-color: #218838; }
+        .sidebar h3 { color: #333; border-bottom: 2px solid #ccc; padding-bottom: 10px; margin-bottom: 15px; }
+        
+        /* Buton ve Mesaj Listesi Stilleri */
         .view-messages-button {
-            background-color: #007bff;
-            color: white;
-            padding: 10px;
+            background-color: #ffc107; /* Sarı renk, sürpriz hissi */
+            color: #333;
+            padding: 15px;
             border: none;
-            border-radius: 6px;
+            border-radius: 8px;
             cursor: pointer;
-            font-size: 16px;
+            font-size: 18px;
+            font-weight: bold;
             width: 100%;
-            transition: background-color 0.3s;
+            transition: background-color 0.3s, transform 0.2s;
+            margin-bottom: 20px;
         }
 
         .view-messages-button:hover {
-            background-color: #0056b3;
+            background-color: #e0a800;
+            transform: scale(1.02);
         }
 
         .message-list {
             list-style: none;
             padding: 0;
             margin-top: 15px;
-            /* Başlangıçta gizli tut, JS ile gösterilebilir */
-            /* display: none; */
+            /* Mesajlar başlangıçta gizli */
+            display: none; 
         }
 
         .message-item {
             background-color: #ffffff;
-            padding: 10px;
-            border-radius: 6px;
-            margin-bottom: 10px;
-            border-left: 5px solid #007bff;
+            padding: 12px;
+            border-radius: 8px;
+            margin-bottom: 15px;
+            border-left: 5px solid #fd7e14; /* Turuncu çizgi */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            animation: fadeIn 0.5s ease-out; /* Görünür olduğunda yumuşak giriş */
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
         }
 
         .message-item strong {
             display: block;
-            color: #007bff;
+            color: #dc3545; /* Kırmızı isim */
             margin-bottom: 5px;
+            font-size: 1.1em;
         }
 
     </style>
@@ -177,73 +81,107 @@
 <div class="container">
     <div class="main-content">
         <div class="envelope-container">
-            <div class="heart">❤️</div>
-            <div class="envelope"></div>
+            <div class="heart">🎂</div> <div class="envelope"></div>
         </div>
 
-        <h2>💌 Mesajını Gönder</h2>
-        <p>Bana özel bir not bırakmak ister misin?</p>
+        <h2>🥳 Doğum Günün Kutlu Olsun!</h2>
+        <p>Gelen kutlama mesajlarını görmek için sağdaki butona tıkla. Bana da bir not bırakmayı unutma!</p>
 
-        <form action="#" method="POST" id="messageForm">
+        <form action="https://formspree.io/f/xyza1234" method="POST" id="messageForm">
             <div class="form-group">
                 <label for="senderName">Gönderen İsim/Takma Adı:</label>
-                <input type="text" id="senderName" name="senderName" placeholder="Adınız/Takma Adınız" required>
+                <input type="text" id="senderName" name="Gönderen İsim" placeholder="Adınız/Takma Adınız" required>
             </div>
 
             <div class="form-group">
                 <label for="messageContent">Mesajın:</label>
-                <textarea id="messageContent" name="messageContent" placeholder="İçten dileklerini buraya yaz..." required></textarea>
+                <textarea id="messageContent" name="Mesaj İçeriği" placeholder="İyi dileklerini buraya yaz..." required></textarea>
             </div>
 
             <div class="form-group">
-                <label for="photoUpload">Fotoğraf Atabilirsin (İsteğe Bağlı):</label>
-                <input type="file" id="photoUpload" name="photoUpload" accept="image/*">
+                <label for="photoUpload">Fotoğraf Atabilirsin (Link veya İsteğe Bağlı):</label>
+                <input type="text" id="photoUpload" name="Fotoğraf Linki" placeholder="Fotoğrafın linkini buraya yapıştırabilirsin.">
             </div>
 
-            <button type="submit" class="send-button">🚀 Mesajı Gönder</button>
+            <button type="submit" class="send-button">💌 Mesajı Gönder</button>
         </form>
     </div>
 
     <div class="sidebar">
-        <h3>🎉 Kutlayanlar / Gönderenler</h3>
-        <button class="view-messages-button" onclick="toggleMessages()">Gönderilenleri Gör</button>
+        <h3>🎁 Arkadaşlarından Sürpriz Mesajlar</h3>
+        
+        <button class="view-messages-button" id="surpriseButton">
+            ZARFLARI AÇ VE MESAJLARI GÖR!
+        </button>
 
         <ul class="message-list" id="messageList">
-            <li class="message-item">
-                <strong>Gizli Hayran</strong>
-                <p>Çalışmaların harika, başarılarının devamını dilerim!</p>
+            <li class="message-item placeholder-text">
+                Butona tıklandığında mesajlar burada belirecek...
             </li>
-            <li class="message-item">
-                <strong>Ali</strong>
-                <p>Projen çok ilham verici. Teşekkürler!</p>
-            </li>
-            </ul>
+        </ul>
     </div>
 </div>
 
 <script>
-    function toggleMessages() {
-        var list = document.getElementById('messageList');
-        var button = document.querySelector('.view-messages-button');
-        if (list.style.display === 'none' || list.style.display === '') {
-            list.style.display = 'block';
-            button.textContent = 'Gönderilenleri Gizle';
-        } else {
-            list.style.display = 'none';
-            button.textContent = 'Gönderilenleri Gör';
-        }
+    // 1. MESAJ VERİSİ: Arkadaşlarının mesajlarını buraya yazıyoruz.
+    const surpriseMessages = [
+        { name: "Gizem (En Yakın)", message: "Nice yaşlara canım! Sen benim için sadece bir arkadaş değil, aile gibisin. Yeni yaşında tüm güzellikler seninle olsun. Çok seviyorum!" },
+        { name: "Ahmet (Üniversite)", message: "Doğum günün kutlu olsun! Kodlamada ve hayatta hep böyle başarılı ve neşeli kalman dileğiyle. Akşam kutlamada görüşürüz!" },
+        { name: "Selen (Lise)", message: "Hala o kadar komik ve tatlısın ki! Seni tanıdığım için çok şanslıyım. Sağlık, mutluluk ve bol kahkahalı bir yıl diliyorum!" },
+        { name: "Can (İş Arkadaşı)", message: "Sevgili dostum, yeni yaşın sana yepyeni projeler, bol kazanç ve huzur getirsin. İşler her zaman iyi gitsin. İyi ki varsın!" },
+        { name: "Eren (Eski Dost)", message: "Doğum gününü en içten dileklerimle kutlarım. Her ne kadar görüşemesek de seni unutmuyorum. Eski günlerin hatrına..." },
+        { name: "Anonim Hayran 🌟", message: "Yazıların ve projelerin mükemmel. Hayatında da hep zirvede kal. Nice nice güzel yaşlara!" }
+    ];
+
+    const messageList = document.getElementById('messageList');
+    const surpriseButton = document.getElementById('surpriseButton');
+
+    // 2. BUTON FONKSİYONU
+    function loadAndDisplayMessages() {
+        // Liste görünür yapılıyor
+        messageList.style.display = 'block';
+        
+        // Yer tutucu metni temizle
+        messageList.innerHTML = ''; 
+
+        // Her bir mesajı listeye ekle
+        surpriseMessages.forEach( (msg, index) => {
+            const listItem = document.createElement('li');
+            listItem.classList.add('message-item');
+            
+            // Mesajın içeriği
+            listItem.innerHTML = `
+                <strong>${msg.name}</strong>
+                <p>${msg.message}</p>
+            `;
+            
+            // Listenin sonuna ekle
+            messageList.appendChild(listItem);
+        });
+
+        // Buton metnini değiştir ve etkisizleştir
+        surpriseButton.textContent = 'Mesajlar Görüntülendi! 🎉';
+        surpriseButton.disabled = true;
+        surpriseButton.style.backgroundColor = '#28a745'; // Yeşil yap
+        surpriseButton.style.color = 'white';
     }
 
-    // Form gönderiminde basit bir uyarı
+    // 3. OLAY DİNLEYİCİ
+    surpriseButton.addEventListener('click', loadAndDisplayMessages);
+
+    // 4. Form Gönderimi Uyarısı (Formspree entegrasyonu için)
     document.getElementById('messageForm').addEventListener('submit', function(event) {
-        event.preventDefault(); // Sayfanın yeniden yüklenmesini engelle
-        alert('Gönder butonuna bastınız. NOT: Bu formun gerçek gönderim yapabilmesi için arka plan (backend) kodlaması gereklidir.');
-        // Burada formu gerçek bir sunucuya gönderme kodunuz olmalı.
+        // Eğer Formspree URL'niz # değil de gerçek bir URL ise bu uyarıyı kaldırabilirsiniz.
+        // Formspree sizi kendi "Teşekkürler" sayfasına yönlendirecektir.
+        // event.preventDefault(); // Eğer Formspree kullanıyorsanız bu satırı SİLİN.
+        
+        // alert('Mesajın Formspree üzerinden başarıyla gönderildi! Teşekkürler.');
     });
-    
-    // Başlangıçta mesaj listesini gizle
+
+    // Başlangıçta placeholder metnini göster ve mesaj listesini gizle
     document.addEventListener('DOMContentLoaded', function() {
-        document.getElementById('messageList').style.display = 'none';
+        messageList.style.display = 'block'; // Yer tutucunun görünmesi için
+        messageList.innerHTML = '<li class="message-item placeholder-text">Butona tıklandığında sürpriz mesajlar burada belirecek...</li>';
     });
 
 </script>
